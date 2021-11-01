@@ -17,9 +17,27 @@ html {
   margin: 12px 0;
   padding: 48px;
 }
+.items li:nth-child(2n) {
+  background: #006;
+}
 
 @media screen and (min-width: 410px) {
+  @supports(display: grid) {
+    .items {
+      margin: 12px; /* Add margin around container */
+    }
+    .items li {
+      margin: 0; /* No margin around items; use gap instead */
+    }
+  }
   
+  .items {
+    display: grid;
+    grid-gap: 12px;
+    gap: 12px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+  }
   /*
   Flexbox Demo code:
   */
