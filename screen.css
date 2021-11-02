@@ -16,6 +16,19 @@ html {
   */
   line-height: 1.3333333333em; /* 24/18 = 1.3333333333 */
 }
+h1 {
+  font-size: 5.3333333333em; /* 96/18 = 5.3333333333 */
+  /*
+   ANOTHER BIG GIANT NOTE!
+   Again, change the `font-size`, change the context
+   (in pixels). 5.333em = 96px = new context for the line-height
+   Here, that works out to 1em! So you can see how important
+   it is to include your math and original pixel values, so
+   that you can understand what *absolute* value a relative
+   value ought to represent.
+  */
+  line-height: 1em; /* 96/96 = 1 */
+}
 .items li {
   background-color: #600;
   color: #EEE;
