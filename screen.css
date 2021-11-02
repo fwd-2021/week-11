@@ -8,33 +8,41 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 /* Begin site styles below */
 html {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 1.125em; /* 18/16 = 1.125 */
+  /*
+   BIG GIANT NOTE!
+   When you change the `font-size`, you change the context
+   (in pixels). 1.125em = 18px = new context for the line-height
+  */
+  line-height: 1.3333333333em; /* 24/18 = 1.3333333333 */
 }
 .items li {
   background-color: #600;
   color: #EEE;
-  margin: 12px 0;
-  padding: 48px;
+  margin: 0.6666666667em 0; /* 12/18 = 0.6666666667 */
+  padding: 2.6666666667em; /* 48/18 = 2.6666666667 */
 }
 .items li:nth-child(2n) {
   background: #006;
 }
 
-@media screen and (min-width: 410px) {
+/* Context is ALWAYS 16px for Media Queries */
+/* 410/16 = 25.625 */
+@media screen and (min-width: 25.625em) {
   @supports(display: grid) {
     .items {
-      margin: 12px; /* Add margin around container */
+      /* Add margin around container */
+      margin: 0.6666666667em; /* 12/18 = 0.6666666667 */
     }
     .items li {
       margin: 0; /* No margin around items; use gap instead */
     }
   }
-  
+
   .items {
     display: grid;
-    grid-gap: 12px;
-    gap: 12px;
+    grid-gap: 0.6666666667em; /* 12/18 = 0.6666666667 */
+    gap: 0.6666666667em; /* 12/18 = 0.6666666667 */
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
   }
