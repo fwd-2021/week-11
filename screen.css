@@ -31,6 +31,43 @@ h1 a {
   color: inherit;
 }
 
+/* Layout Styles */
+
+/* Modular Styles */
+#navigation {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 15.748px; /* 1.143 smaller than georgia */
+}
+#navigation li {
+  margin-bottom: 6px;
+}
+#navigation a {
+  background-color: #333;
+  color: #CCC;
+  display: block;
+  line-height: 0;
+  padding: 24px;
+  text-decoration: none;
+}
+#navigation a:hover,
+#navigation a:active,
+#navigation a:focus,
+#about #nav-about {
+  background-color: #666;
+}
+
+/*
+  State Styles
+*/
+@media screen and (min-width: 600px) {
+  #navigation ul {
+    display: flex;
+  }
+  #navigation ul > li {
+    flex: 1 0 auto;
+  }
+}
+
 /*
   Non-visible content elements
 */
